@@ -28,13 +28,16 @@ Computer Fields and Phone Fields
 ## Export
 Export all users and assets on setyl
 1. [Export Assets](https://app.setyl.com/physical_assets/table)
-![Export Assets](images/image.png)
+
+    ![Export Assets](images/image.png)
 
 2. [Export People](https://app.setyl.com/users/table)
-![Export People](images/image-1.png)
+
+    ![Export People](images/image-1.png)
 
     After all are downloaded, enter the csv into the ```files``` folder
-![Download csv file](images/image-2.png)
+    
+    ![Download csv file](images/image-2.png)
 
 ## Before import
 
