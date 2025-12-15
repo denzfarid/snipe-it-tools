@@ -1,11 +1,11 @@
 import csv
 
-input_file = "files/people-2025-05-27.csv"
-output_file = "converted/people-2025-05-27.csv"
+input_file = "files/people-2025-12-15.csv"
+output_file = "converted/people-2025-12-15.csv"
 
 snipeit_fields = [
     'First Name', 'Last Name', 'Username', 'Email', 'Phone', 'Address', 'Department',
-    'Employee Number', 'Location', 'Notes', 'Job Title', 'Start Date'
+    'Employee Number', 'Location', 'Notes', 'Job Title', 'Start Date', 'End Date', 'Manager First Name', 'Manager Username'
 ]
 
 with open(input_file, newline='', encoding='utf-8') as infile, \
@@ -23,12 +23,15 @@ with open(input_file, newline='', encoding='utf-8') as infile, \
             "Email": row.get("Email", "").strip(),
             "Phone": row.get("Phone", "").strip(),
             "Address": row.get("Address", "").strip(),
-            "Department": row.get("Departments", "").strip(),
+            "Department": row.get("Department", "").strip(),
             "Employee Number": row.get("Employee ID", "").strip(),
-            "Location": row.get("Locations", "Main Office").strip(),
+            "Location": row.get("Location", "Main Office").strip(),
             "Notes": row.get("Notes", "").strip(),
             "Job Title": row.get("Job Title", "").strip(),
-            "Start Date": row.get("Join Date", "").strip()
+            "Start Date": row.get("Join Date", "").strip(),
+            "End Date": row.get("Leave Date", "").strip(),
+            "Manager First Name": row.get("Manager", "").strip(),
+            "Manager Username": row.get("Manager Email", "").strip()
         })
 
 print(f"Done. Import this file to snipe-it: {output_file}")
